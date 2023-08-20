@@ -11,6 +11,6 @@ def send_order(order: Order = Body(...)):
     print(order)
 
     with open("last_order.txt", "w") as file:
-        file.write(order)
+        file.write(str(order))
 
     return order
